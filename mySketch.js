@@ -163,3 +163,7 @@ function mouseWheel(event) {																	// при использовани�
 	}
   return false;																								// запрещаем прокручивание окна колесиком
 }
+
+function windowResized() { 
+	createCanvas(windowWidth, windowHeight);			// создаем холст по размеру окна
+}
