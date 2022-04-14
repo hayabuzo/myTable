@@ -21,7 +21,7 @@ function addfiles(file) {	   											// при открытии пользо�
 	
   	bg = createSelect();								bg.position(300,10).size(100,30);
 		bg.style('font-family: monospace; font-size: 20px; text-align: left; background-color: black; color: white');
-  	bg.option('wood');									bg.option('color');									bg.option('none');									bg.selected('color');
+  	bg.option('wood');									bg.option('color');									bg.option('none');									bg.selected('wood');
 
 		cp = createColorPicker('#808080');  cp.position(410,10).size(100,30);
 		cp.style('font-family: monospace; font-size: 20px; text-align: left; background-color: black; color: white');
@@ -165,8 +165,12 @@ function mouseWheel(event) {																	// при использовани�
 }
 
 function windowResized() { 
+	createCanvas(max(windowWidth,1100), windowHeight);
 	if (loaded) {
-		createCanvas(windowWidth, windowHeight);
 		d = new Deleter(50,height-50,40);
+	} else {
+		file_input.remove();
+		sel.remove();
+		startup();
 	}
 }
