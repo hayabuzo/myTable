@@ -165,5 +165,8 @@ function mouseWheel(event) {																	// при использовани�
 }
 
 function windowResized() { 
-	createCanvas(windowWidth, windowHeight);			// создаем холст по размеру окна
+	if (loaded) {
+		createCanvas(windowWidth, windowHeight);
+		d = new Deleter(50,height-50,40);
+	}
 }
