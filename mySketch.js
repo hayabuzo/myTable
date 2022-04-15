@@ -41,8 +41,10 @@ function addfiles(file) {	   											// при открытии пользо�
 		nms = createButton('Names'); 	    	nms.position(950,10).size(80,30);  	nms.mousePressed(shownames);		
 		nms.style('font-family: monospace; font-size: 20px; text-align: center; background-color: black; color: white');
 		
+		windowResized();
+		
 	}
-	
+
 }
 
 function shownames() {			// функция показа и скрытия имен
@@ -165,8 +167,14 @@ function mouseWheel(event) {																	// при использовани�
 }
 
 function windowResized() { 
-	createCanvas(max(windowWidth,1100), windowHeight);
+	createCanvas(windowWidth, windowHeight);
 	if (loaded) {
+		cp .position(410%(width-100),10+40*floor(410/(width-100))).size(100,30);
+		scr.position(520%(width-100),10+40*floor(520/(width-100))).size(150,30);
+		srt.position(680%(width-100),10+40*floor(680/(width-100))).size(80,30);
+		swp.position(770%(width-100),10+40*floor(770/(width-100))).size(80,30);
+		clr.position(860%(width-100),10+40*floor(860/(width-100))).size(80,30);
+		nms.position(950%(width-100),10+40*floor(950/(width-100))).size(80,30);
 		d = new Deleter(50,height-50,40);
 	} else {
 		file_input.remove();
