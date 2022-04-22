@@ -1,5 +1,5 @@
 # myTable (p5js)
-Virtual table to move and sort pictures and photographs. 
+Digital table to move and sort pictures and photographs.
 
 ![image](https://user-images.githubusercontent.com/38255514/163686352-48eee2bb-16bd-4f2f-b947-eb550d434af4.png)
 
