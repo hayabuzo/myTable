@@ -120,7 +120,7 @@ function setup() {
 	for (let element of document.getElementsByClassName("p5Canvas")) { 
 		element.addEventListener("contextmenu", (e) => e.preventDefault());  }  // блокировка стандартного поведения правой кнопки мыши
 	
-	createCanvas(windowWidth, windowHeight);			// создаем холст по размеру окна
+	cnv = createCanvas(windowWidth, windowHeight);	canvas.drop(addfiles, true);		// создаем холст по размеру окна
 	startup();																		// создаем графику начального экрана
 	d = new Deleter(50,height-50,40);							// создаем объект-корзину
 	loaded = false;																// по умолчанию запрещаем выполнение основного скетча до загрузки изображений
@@ -167,7 +167,7 @@ function mouseWheel(event) {																	// при использовани�
 }
 
 function windowResized() { 
-	createCanvas(windowWidth, windowHeight);
+	cnv = createCanvas(windowWidth, windowHeight);
 	if (loaded) {
 		cp .position(410%(width-100),10+40*floor(410/(width-100))).size(100,30);
 		scr.position(520%(width-100),10+40*floor(520/(width-100))).size(150,30);
