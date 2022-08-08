@@ -120,7 +120,7 @@ function setup() {
 	for (let element of document.getElementsByClassName("p5Canvas")) { 
 		element.addEventListener("contextmenu", (e) => e.preventDefault());  }  // блокировка стандартного поведения правой кнопки мыши
 	
-	cnv = createCanvas(windowWidth, windowHeight);	canvas.drop(addfiles, true);		// создаем холст по размеру окна
+	cnv = createCanvas(windowWidth, windowHeight);	cnv.drop(addfiles, true);		// создаем холст по размеру окна
 	startup();																		// создаем графику начального экрана
 	d = new Deleter(50,height-50,40);							// создаем объект-корзину
 	loaded = false;																// по умолчанию запрещаем выполнение основного скетча до загрузки изображений
